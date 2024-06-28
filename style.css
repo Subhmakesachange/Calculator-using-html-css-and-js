@@ -1,0 +1,137 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+#container {
+    width: 1000px;
+    height: 550px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#title {
+    text-align: left;
+    margin-right: 20px;
+}
+
+#title h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#title h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #b0b0b0;
+}
+
+#calculator {
+    width: 320px;
+    height: 520px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+}
+
+#calculator:hover {
+    transform: scale(1.05);
+}
+
+#result {
+    height: 120px;
+}
+
+#history {
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #b0b0b0;
+}
+
+#output {
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+}
+
+#keyboard {
+    height: 400px;
+}
+
+.operator, .number, .empty {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    border-radius: 50%;
+    border-width: 0;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.number, .empty {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.number:hover, .operator:hover {
+    background-color: #66bb6a;
+    transform: scale(1.1);
+}
+
+.number:active, .operator:active {
+    transform: scale(0.9);
+}
+
+.operator:focus, .number:focus, .empty:focus {
+    outline: 0;
+}
+
+button:nth-child(4) {
+    font-size: 20px;
+    background-color: #388e3c;
+    color: #ffffff;
+}
+
+button:nth-child(8) {
+    font-size: 20px;
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+button:nth-child(12) {
+    font-size: 20px;
+    background-color: #1b5e20;
+    color: #ffffff;
+}
+
+button:nth-child(16) {
+    font-size: 20px;
+    background-color: #33691e;
+    color: #ffffff;
+}
+
+button:nth-child(20) {
+    font-size: 20px;
+    background-color: #004d40;
+    color: #ffffff;
+}
+
+@keyframes buttonClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+button:active {
+    animation: buttonClick 0.2s;
+}
